@@ -1,12 +1,12 @@
 package com.gopal.persistentJdbc;
 
 
-public class Customer {
+public class CustomerEntity {
 
 	private int id;
 	private String customerName;
 	
-	Customer(){
+	CustomerEntity(){
 		
 	}
 	
@@ -35,6 +35,6 @@ public class Customer {
 	
 	@Override
 	public String toString() {
-		return "id:"+ id + " customername:" + customerName;
+		return "Values of CustomerEntity id:"+ id + " customername:" + customerName;
 	}
 }

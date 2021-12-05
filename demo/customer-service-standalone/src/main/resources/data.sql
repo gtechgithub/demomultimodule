@@ -1,1 +1,0 @@
-insert into customer(id, customer_name)  values (1, 'gopal');

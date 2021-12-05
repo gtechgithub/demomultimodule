@@ -15,7 +15,7 @@ public class JDBCTemplateRepository {
 	
 	
 	public String getAllRecords() {
-		 List<Customer> custList =  jdbcTemplate.query("select * from customer", new CustomerRowMapper());
+		 List<CustomerEntity> custList =  jdbcTemplate.query("select * from customer", new CustomerRowMapper());
 		 return custList.get(0).toString();
 	}
 	

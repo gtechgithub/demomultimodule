@@ -5,12 +5,12 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-public class CustomerRowMapper implements RowMapper<Customer> {
+public class CustomerRowMapper implements RowMapper<CustomerEntity> {
 
 	@Override
-	public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
+	public CustomerEntity mapRow(ResultSet rs, int rowNum) throws SQLException {
 
-		Customer cust = new Customer();
+		CustomerEntity cust = new CustomerEntity();
 		cust.setId( Integer.parseInt(rs.getString("id")));
 		cust.setCustomerName(rs.getString("customer_name"));
 		

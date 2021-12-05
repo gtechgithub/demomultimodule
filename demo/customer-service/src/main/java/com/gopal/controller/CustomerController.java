@@ -14,18 +14,23 @@ import com.gopal.service.CustomerServiceImpl;
 @RestController
 @RequestMapping("/api")
 public class CustomerController {
-
+	
+	
 	@Autowired
 	private CustomerServiceImpl customerService;
 	
-	@Autowired
-	private JDBCTemplateRepository jdbcTemplateRepo;
 	
 	@GetMapping("show")
 	public @ResponseBody String show() {
 		
 		return customerService.show().toString();
 	}
+	
+	
+	@Autowired
+	private JDBCTemplateRepository jdbcTemplateRepo;
+	
+
 	
 	@GetMapping("showJdbc")
 	public @ResponseBody String showJdbc() {
