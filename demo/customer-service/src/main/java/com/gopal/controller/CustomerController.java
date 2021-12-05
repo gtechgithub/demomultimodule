@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gopal.persistentJdbc.JDBCTemplateRepository;
 import com.gopal.service.CustomerServiceImpl;
 
 
@@ -17,11 +18,18 @@ public class CustomerController {
 	@Autowired
 	private CustomerServiceImpl customerService;
 	
+	@Autowired
+	private JDBCTemplateRepository jdbcTemplateRepo;
 	
 	@GetMapping("show")
 	public @ResponseBody String show() {
 		
 		return customerService.show().toString();
+	}
+	
+	@GetMapping("showJdbc")
+	public @ResponseBody String showJdbc() {
+		return jdbcTemplateRepo.getAllRecords();
 	}
 	
 }
