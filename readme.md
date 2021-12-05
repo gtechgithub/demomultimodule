@@ -3,9 +3,9 @@
 it has main module called demo where we can compile using mvn clean install which will build all the child modules
 such as 
 
-customer-service
-customer-service-standalone
-data-entities
+* customer-service
+* customer-service-standalone
+* data-entities
 
 ## usage of modules
 
@@ -15,4 +15,6 @@ customer-service is used by customer-service-standalone which is the spring boot
 
 to execute the module of customer-service-standalone
 
+```
 mvn spring-boot:run 
+```
