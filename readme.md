@@ -1,6 +1,6 @@
 # this is the read me to push for multi module 
 
-it has main module called demo where we can compile using mvn clean install which will build all the child modules
+it has main module called demo where we can compile using ```mvn clean install``` which will build all the child modules
 such as 
 
 * customer-service
